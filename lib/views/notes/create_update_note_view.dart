@@ -56,7 +56,7 @@ class _CreateUpdateNoteViewState extends State<CreateUpdateNoteView> {
     }
 
     final currentUser = AuthService.firebase().currentUser!;
-    final email = currentUser.email!;
+    final email = currentUser.email;
     final owner = await _notesService.getUser(email: email);
     final newNote = await _notesService.createNotes(owner: owner);
     _note = newNote;
@@ -99,12 +99,31 @@ class _CreateUpdateNoteViewState extends State<CreateUpdateNoteView> {
             switch (snapshot.connectionState) {
               case ConnectionState.done:
                 _setupTextControllerListener();
-                return TextField(
-                  controller: _textController,
-                  keyboardType: TextInputType.multiline,
-                  maxLines: null,
-                  decoration: const InputDecoration(
-                    hintText: 'Start typing your note...',
+                return Container(
+                  // height: 35,
+                  // width: 35,
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(top: 20),
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: TextField(
+                          controller: _textController,
+                          keyboardType: TextInputType.multiline,
+                          maxLines: null,
+                          decoration: const InputDecoration(
+                            hintText: 'Start typing your note...',
+                            contentPadding: EdgeInsets.all(0),
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 );
               default:
