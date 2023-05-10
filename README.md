@@ -1,16 +1,14 @@
-# mynotes
 
-A new Flutter project.
+# DailyDo
+A To-Do List App build on Flutter with Firebase
 
-## Getting Started
+## Feature
+- User Authentication
+- Email Verification
+- Create, Edit and Delete Task
+- To Do List sync with Firebase
+- Share To Do Task
 
-This project is a starting point for a Flutter application.
+## Screenshots
+![Untitled design (7)](https://github.com/jengyang7/DailyDo/assets/54074733/c0468c82-807f-487e-818e-c3e8c54e7842)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
