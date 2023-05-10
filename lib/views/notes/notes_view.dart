@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mynotes/constants/colors.dart';
 import 'package:mynotes/services/auth/auth_service.dart';
 import 'package:mynotes/constants/routes.dart';
 import 'package:mynotes/enums/menu_action.dart';
@@ -28,8 +29,10 @@ class _NotesViewState extends State<NotesView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backGroundColor,
       appBar: AppBar(
-        title: const Text('Your Notes'),
+        backgroundColor: appBarColor,
+        title: const Text('My DailyDo'),
         actions: [
           IconButton(
               onPressed: () {

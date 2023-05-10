@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mynotes/utilities/generics/get_arguments.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../constants/colors.dart';
 import '../../services/auth/auth_service.dart';
 import 'package:mynotes/services/cloud/cloud_note.dart';
 import 'package:mynotes/services/cloud/cloud_storage_exceptions.dart';
@@ -96,8 +97,10 @@ class _CreateUpdateNoteViewState extends State<CreateUpdateNoteView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backGroundColor,
       appBar: AppBar(
-        title: const Text('New Note'),
+        backgroundColor: const Color(0xFF1E232C),
+        title: const Text('New / Update Todo'),
         actions: [
           IconButton(
             onPressed: () async {
@@ -136,7 +139,7 @@ class _CreateUpdateNoteViewState extends State<CreateUpdateNoteView> {
                           keyboardType: TextInputType.multiline,
                           maxLines: null,
                           decoration: const InputDecoration(
-                            hintText: 'Start typing your note...',
+                            hintText: 'Type your todo here...',
                             contentPadding: EdgeInsets.all(0),
                             border: InputBorder.none,
                           ),
